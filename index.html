@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OrderFlow</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav><h2>Order<span>Flow</span></h2><div><a href="#dashboard">Dashboard</a><a href="#orders">Orders</a><a href="#customers">Customers</a></div></nav>
+
+<section class="hero" id="dashboard">
+<p class="tag">ORDER MANAGEMENT SYSTEM</p>
+<h1>Manage Orders.<br><span>Work Smarter.</span></h1>
+<p>Simple order processing and customer management portal.</p>
+</section>
+
+<section class="dashboard">
+<div class="card"><h3>Total Orders</h3><h2 id="totalOrders">0</h2><p>All orders</p></div>
+<div class="card"><h3>Pending</h3><h2 id="pendingOrders">0</h2><p>Waiting</p></div>
+<div class="card"><h3>Processing</h3><h2 id="processingOrders">0</h2><p>In progress</p></div>
+<div class="card"><h3>Completed</h3><h2 id="completedOrders">0</h2><p>Delivered</p></div>
+</section>
+
+<section class="panel" id="orders">
+<div class="head"><div><h2>Order Management</h2><p>Add, search and manage orders.</p></div><input id="searchBox" placeholder="Search orders..." oninput="renderOrders()"></div>
+<div class="form">
+<input id="customer" placeholder="Customer Name">
+<input id="product" placeholder="Product Name">
+<select id="status"><option>Pending</option><option>Processing</option><option>Delivered</option></select>
+<button onclick="addOrder()">+ Add Order</button>
+</div>
+<div class="tablewrap"><table><thead><tr><th>ID</th><th>Customer</th><th>Product</th><th>Status</th><th>Action</th></tr></thead><tbody id="orderTable"></tbody></table></div>
+</section>
+
+<section class="panel" id="customers"><h2>Customers</h2><p>Customers from your orders.</p><div id="customerList" class="customers"></div></section>
+<footer>© 2026 OrderFlow | Order Management Portal</footer>
+
+<footer class="Creator-footer">
+    <h3>Created By logah</h3>
+    <a href="https://github.com/loga-cs/order-flow-"target="_blank">Github</a>
+</footer>
+
+
+<script src="script.js"></script>
+</body>
+</html>
